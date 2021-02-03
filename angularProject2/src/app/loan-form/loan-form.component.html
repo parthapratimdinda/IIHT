@@ -1,0 +1,46 @@
+<section>
+    <h3>
+        Loan Form
+    </h3>
+    <form>
+        <div>
+            <label>
+                Amount:
+            </label>
+            <input type="number" name="amount" [(ngModel)]="loan.amount"/>
+        </div>
+        <div>
+            <label>
+                Period:
+            </label>
+            <input type="number" name="Period" [(ngModel)]="loan.period"/>
+        </div>
+        <div>
+            <label>
+                Rate Of Interest:
+            </label>
+            <input type="number" name="rateOfInterest" [(ngModel)]="loan.rateOfInterest"/>
+        </div>
+        <div>
+            <label>
+                Simple Interest:
+            </label>
+            <input type="number" name="simpleInterest" [(ngModel)]="loan.simpleInterest"/>
+        </div>
+        <div>
+            <label>
+                Amount Payable:
+            </label>
+            <input type="number" name="amountPayable" [(ngModel)]="loan.amountPayable"/>
+        </div>
+        <div>
+            <button type="button" (click)="compute()">Compute Interest</button>
+        </div>
+    </form>
+    <div>
+        <p>
+            You need to pay {{loan.amountPayable}}
+            including the interest {{loan.simpleInterest}}
+        </p>
+    </div>
+</section>

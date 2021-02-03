@@ -1,0 +1,18 @@
+<header>
+<section>
+  <div [class]="{bgRed:c1, brd:c2, pd:c3}">
+    <img [src]="logo" alt="Rose" [style.width]="imgWidth">
+  </div>
+  <h2>{{banner}}</h2>
+  <div>
+    <input type="text"  [(ngModel)]="banner" placeholder="Banner"> 
+    
+  </div>
+  <div>
+    <input type="checkbox" [(ngModel)]="c1"   /> BackgroundColor
+    <input type="checkbox"  [(ngModel)]="c2" /> BorderDotted
+    <input type="checkbox" [(ngModel)] ="c3" /> Padding
+  </div>
+  <button (click)="doOnClick()">Click Me</button>
+</section>
+</header>
